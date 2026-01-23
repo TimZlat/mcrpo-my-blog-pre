@@ -18,6 +18,8 @@ yarn-debug.log*
 yarn-error.log*
 dist/
 build/
+frontend/
+
 
 # IDE
 .idea/
