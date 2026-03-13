@@ -1,9 +1,5 @@
 package com.myblog.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myblog.config.DatabaseConfig;
-import com.myblog.config.RootConfig;
-import com.myblog.config.WebConfig;
 import com.myblog.dto.CreateCommentRequest;
 import com.myblog.dto.CreatePostRequest;
 import com.myblog.dto.UpdateCommentRequest;
@@ -21,14 +17,14 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.Arrays;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {RootConfig.class, WebConfig.class, DatabaseConfig.class})
+
 @WebAppConfiguration
 @Transactional
 class CommentControllerIntegrationTest {
